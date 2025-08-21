@@ -1,0 +1,213 @@
+.cart {
+margin-top: 100px;
+margin-bottom: 50px;
+}
+.cart-items-title{
+display: grid;
+grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+align-items: center;
+font-size: max1vw, 12px;
+color: grey;
+}
+.cart-items-item {
+    margin:10px 0px;
+    color: black;
+}
+.cart-items-item img {
+    width: 50px;
+}
+
+.cart hr{
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+}
+
+.cross {
+    cursor: pointer;
+}
+
+.cart-bottom {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* biar responsif di layar kecil */
+}
+
+.cart-total {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-total h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+.cart-total hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 10px 0;
+}
+
+.cart-checkout {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6347; /* tomat/oranye */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cart-checkout:hover {
+  background: #e5533d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(229, 83, 61, 0.4);
+}
+
+.cart-checkout:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(229, 83, 61, 0.3);
+}
+
+.cart-promocode {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-promocode p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #555;
+}
+
+.cart-promocode-input {
+  display: flex;
+  gap: 10px;
+}
+
+.cart-promocode-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.cart-promocode-input input:focus {
+  border-color: #ff6347;
+}
+
+.cart-promocode-input button {
+  padding: 10px 16px;
+  background: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cart-promocode-input button:hover {
+  background: #e5533d;
+}
+
+/* ============================= */
+/* 📱 Responsive Layout */
+/* ============================= */
+
+@media (max-width: 1024px) {
+  .cart-items-title {
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr; /* sederhanakan di tablet */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart {
+    margin-top: 60px; /* lebih rapat di layar kecil */
+    padding: 0 10px;
+  }
+
+  .cart-items-title {
+    grid-template-columns: 1fr 1fr 1fr; /* cuma 3 kolom di mobile */
+    font-size: 12px;
+  }
+
+  .cart-items-item img {
+    width: 40px;
+  }
+
+  .cart-bottom {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+    gap: 20px;
+  }
+
+  .cart-total,
+  .cart-promocode {
+    min-width: 100%;
+  }
+
+  .cart-checkout {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .cart-promocode-input {
+    flex-direction: column;
+  }
+
+  .cart-promocode-input button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart {
+    margin-top: 40px;
+  }
+
+  .cart-total h2 {
+    font-size: 18px;
+  }
+
+  .cart-total-details {
+    font-size: 14px;
+  }
+
+  .cart-checkout {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .cart-promocode p {
+    font-size: 13px;
+  }
+}
+

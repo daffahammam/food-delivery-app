@@ -1,0 +1,72 @@
+.app-download{
+margin: auto auto;
+margin-top: 100px;
+font-size: max(3vw, 20px);
+text-align: center;
+font-weight: 600;
+margin-bottom: 100px;
+}
+
+.app-download-platforms{
+display: flex;
+justify-content: center;
+gap: max(2vw, 10px);
+margin-top: 40px;
+}
+
+.app-download-platforms img{
+width: max(30vw, 120px);
+max-width: 180px;
+transition: 0.5s;
+cursor: pointer;
+}
+
+.app-download-platforms img:hover{
+transform: scale(1.05);
+}
+
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .app-download {
+    font-size: 22px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .app-download-platforms img {
+    width: max(35vw, 110px);
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-download {
+    font-size: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .app-download-platforms {
+    gap: 15px;
+  }
+  .app-download-platforms img {
+    width: max(40vw, 100px);
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-download {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .app-download-platforms {
+    flex-direction: column; /* logo store ditumpuk ke bawah */
+    align-items: center;
+    gap: 20px;
+  }
+  .app-download-platforms img {
+    width: 70%;
+    max-width: 200px;
+  }
+}

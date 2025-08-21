@@ -1,0 +1,145 @@
+.navbar {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+  top: 0;
+  z-index: 100;
+  position: sticky;
+}
+
+.navbar .logo {
+  width: 150px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  color: #333;
+  font-size: 18px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #ff4500;
+}
+
+.navbar .active {
+  color: #ff6347;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #ff6347;
+}
+
+.navbar-search-icon {
+  position: relative;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 140px;
+  }
+
+  .navbar-menu {
+    gap: 25px;
+    font-size: 17px;
+  }
+
+  .navbar-right {
+    gap: 25px;
+  }
+  .navbar-right img {
+    width: 22px;
+  }
+
+  .navbar-right button {
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+
+  .navbar-menu {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+  .navbar-right img {
+    width: 20px;
+  }
+
+  .navbar-right button {
+    padding: 7px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  /* Tambahkan hamburger icon */
+  .navbar .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+}
+
+/* Default sembunyikan hamburger */
+.menu-toggle {
+  display: none;
+}
+
+/* Menu slide in untuk mobile */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 15px;
+  gap: 15px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}

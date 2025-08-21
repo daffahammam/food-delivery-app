@@ -1,0 +1,14 @@
+import './Header.css'
+const Header = () => {
+  return (
+    <div className='header'>
+      <div className='header-contents'>
+          <h2>Order your favorite food here</h2>
+              <p>Choose from a wide range of delicious dishes. Food provides essential nutrients for overall health and well-being</p>
+          <button>View Menu</button>
+      </div>
+    </div>
+  )
+}
+
+export default Header
